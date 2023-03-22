@@ -1,4 +1,6 @@
+
 import org.junit.jupiter.api.Test;
+import org.task1.Main;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -23,5 +25,12 @@ class MainTest {
         int[] list = new int[]{1,0,6,2};
         int closest = Main.closestToZero(list);
         assertEquals(0,closest);
+    }
+
+    @Test
+    void closestToZero_04() {
+        int[] list = new int[]{};
+        int closest = Main.closestToZero(list);
+        assertEquals(-1,closest);
     }
 }
